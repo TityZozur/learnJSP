@@ -43,14 +43,13 @@ public class KalorienBean {
 	}
 
 	
-	
 	public void merkDirDieAuswahl(String[] auswahl){
 		this.ausgewNahrungsmittel.clear();
 		for(String indexString : auswahl){
 			int index = Integer.valueOf(indexString);
 			//int index = Integer.parseInt(indexString);
 			String myNahrungsmittel = this.alleNahrungsmittel[index];
-			this.ausgewNahrungsmittel.put(myNahrungsmittel, new Double(0.0));			
+			this.ausgewNahrungsmittel.put(myNahrungsmittel, Double.valueOf(0.0));			
 		}
 	}
 
