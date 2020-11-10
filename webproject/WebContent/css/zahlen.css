@@ -1,0 +1,3 @@
+@CHARSET "ISO-8859-1";
+table.verbordert, td.verbordert {border: 1px solid green;}
+td.oben {vertical-align: top;}

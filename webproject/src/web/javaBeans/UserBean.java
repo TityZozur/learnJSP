@@ -138,6 +138,11 @@ public class UserBean {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public void druckDichAus() {
+		// TODO Auto-generated method stub
+		
 	}	
 	
 }

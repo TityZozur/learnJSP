@@ -45,6 +45,11 @@ public class MsgBean {
 		this.setActionMsg("geh jetzt zum Login");
 	}
 	
+	public void setLogoutSuccessful(){
+		this.setInfoMsg("Super,");
+		this.setActionMsg("Sie haben sich ausgeloggt");
+	}	
+	
 	public String getInfoMsg() {
 		return infoMsg;
 	}

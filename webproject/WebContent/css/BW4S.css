@@ -1,23 +1,57 @@
 @CHARSET "ISO-8859-1";
 h1 {text-align:center;
-		font-weight:bold;
-		color:green;
-		font-family:monospace;
-		font-size:2em;}
+	font-weight:bold;
+	color:green;
+	font-family:monospace;
+	font-size:3em;
+}
 h2 {text-align:center;
-		font-style:italic;
-		color:gray;
-		font-family:cursive;
-		font-size:1.5em;}
-*#wichtigst {color:red;
-		font-style:italic;
-		text-decoration:blink;}
-*.wichtig {color:green;}
-*.umrahmt {border:1px solid black;}
-*.freaky {color:fuchsia;
-	border: 4px dotted blue;}
-span#phat{font-weight:bolder;}
+	font-style:italic;
+	color:magenta;
+	font-family:cursive;
+	font-size:1.5em;		
+}
+*#einzigartig {
+	text-decoration:line-through;
+}
+body {
+	font-family:serif;
+}
+*.lustig{
+	font-family:fantasy;
+	color:blue;
+	background-color:lime;
+	border:thin solid red;
+}
+*.ernsthaft{
+	font-family:Arial, sans-serif;
+}
+*.gespannt{
+	border:2px
+			dotted
+			black;
+}
+*.gedivt{
+	border:5pt
+			dashed
+			green;
+	margin:0.5cm;
+	padding:2cm;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 100px;
+}
+*.weiss{
+	background-color: white;
+}
+*.gruen{
+	background-color: lime;
+}
+*.msgFeld{
+	color: red;
+	font-weight: bold;
+}
 
-*.mickyLog{background-color:lime;}
-*.donaldLog{background-color:orange;}
-*.errorMsg{color:red;}

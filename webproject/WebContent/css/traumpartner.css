@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+table {border: thin solid white;	
+}
+td {border: thin solid white;
+	margin:0;padding:0;
+}
+*.bg_farbig_links_oben{background-color: #123456;
+			color: white;
+			vertical-align: top;
+			text-align: left;
+			}
+*.bg_farbig_mittig_oben{background-color: #123456;
+			color: white;
+			vertical-align: top;
+			text-align: center;
+			}
+h4 {
+	margin-top: 0;
+} 
+h5 {
+	margin-bottom: 0;
+} 
