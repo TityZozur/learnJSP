@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+h1 {text-align:center;
+		font-weight:bold;
+		color:green;
+		font-family:monospace;
+		font-size:2em;}
+h2 {text-align:center;
+		font-style:italic;
+		color:gray;
+		font-family:cursive;
+		font-size:1.5em;}
+*#wichtigst {color:red;
+		font-style:italic;
+		text-decoration:blink;}
+*.wichtig {color:green;}
+*.umrahmt {border:1px solid black;}
+*.freaky {color:fuchsia;
+	border: 4px dotted blue;}
+span#phat{font-weight:bolder;}
+
+*.mickyLog{background-color:lime;}
+*.donaldLog{background-color:orange;}
+*.errorMsg{color:red;}
