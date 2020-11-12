@@ -35,22 +35,22 @@
 				response.sendRedirect("./PortalAppl.jsp?comeFrom=login");
 			}else{
 				msg.setLoginFailed();
-				response.sendRedirect("./LoginView.jsp");
+				response.sendRedirect("./Login.jsp");
 			}
 		}catch(SQLException se){
 			se.printStackTrace();
 			msg.setSystemfehler();
-			response.sendRedirect("./LoginView.jsp");
+			response.sendRedirect("./Login.jsp");
 		}
 	}else if (zurreg.equals("zurreg")){
 		msg.setRegWelcome();
 		response.sendRedirect("./RegAppl.jsp?comeFrom=login");		
 	}else if(!comeFrom.equals("")){
 		// keine Message-Änderung
-		response.sendRedirect("./LoginView.jsp");
+		response.sendRedirect("./Login.jsp");
 	}else{
 		msg.setGeneralWelcome();
-		response.sendRedirect("./LoginView.jsp");
+		response.sendRedirect("./Login.jsp");
 	}
 %>
 </body>

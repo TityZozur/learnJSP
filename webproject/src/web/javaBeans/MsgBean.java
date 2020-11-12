@@ -21,6 +21,10 @@ public class MsgBean {
 		this.setInfoMsg("Dein Nickname muss mindestens ein Zeichen lang sein");
 		this.setActionMsg("Wähle einen anständigen Nickname");
 	}
+	public void setParamLeer(){
+		this.setInfoMsg("Userid, Pw und Email dürfen nicht leer sein");
+		this.setActionMsg("Wähle anständige Paramtervalues");
+	}
 	
 	public void setGeneralWelcome(){
 		this.setInfoMsg("Willkommen beim BW4S-Portal");

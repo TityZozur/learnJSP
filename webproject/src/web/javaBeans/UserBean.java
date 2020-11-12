@@ -26,6 +26,12 @@ public class UserBean {
 		username = "";
 		email    = "";
 	}
+
+	public void init() {
+		this.setUserid("");
+		this.setUsername("");
+		this.setEmail("");
+	}	
 	
 	public boolean insertUserIfNotExists() throws SQLException{
 		// true = User wurde eingefügt
@@ -38,16 +44,12 @@ public class UserBean {
 	}
 	
 	public boolean checkUserExists() throws SQLException{
-		String sql = "SELECT USERID " + 
-				"FROM USER " +
-				"WHERE USERID =  \'" + this.getUserid() + "\";\'";
+		String sql = "SELECT userid FROM \"S622691\".\"user\" WHERE userid =  ?";
 		System.out.println(sql);
 		PreparedStatement prepStat = dbConn.prepareStatement(sql);
-		//prepStat.setString(1, this.getUserid());
+		prepStat.setString(1, this.getUserid());
 		ResultSet dbRes = prepStat.executeQuery();
-		// return dbRes.next();
-		if (dbRes.next()) return true;
-		else return false;
+		return dbRes.next();	
 	}
 	
 	public void prepareAttributesForDB() {
@@ -74,7 +76,7 @@ public class UserBean {
 	public void insertUserNoCheck() throws SQLException {
 		this.prepareAttributesForDB();
 		// Feldlängen testen
-		String sql = "INSERT INTO USER " +
+		String sql = "INSERT INTO \"S622691\".\"user\" " +
 				"(USERID, PASSWORD, ACTIVE, ADMIN, USERNAME, EMAIL) " +
 				"VALUES " +
 				"(?,?,?,?,?,?)";

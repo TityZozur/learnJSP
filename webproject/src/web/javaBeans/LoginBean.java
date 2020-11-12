@@ -23,16 +23,14 @@ public class LoginBean {
 	
 	public boolean checkUseridPasswort() throws SQLException{
 		String sql = "SELECT userid " + 
-				"FROM USER " +
+				"FROM \"S622691\".\"user\" " +
 				"WHERE USERID = ? AND PASSWORD = ?";
 		System.out.println(sql);
 		PreparedStatement prepStat = dbConn.prepareStatement(sql);
 		prepStat.setString(1, this.getUserid());
 		prepStat.setString(2, this.getPassword());
 		ResultSet dbRes = prepStat.executeQuery();
-		// return dbRes.next();
-		if (dbRes.next()) return true;
-		else return false;
+		 return dbRes.next();
 	}
 	
 	

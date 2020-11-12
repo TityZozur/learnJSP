@@ -12,7 +12,7 @@
 <jsp:useBean id="msg" class="web.javaBeans.MsgBean" scope="session"/>
 
 <table>
-	<tr><td><h4>O4S Portal</h4></td><td><a href="https://www.hwg-lu.de/"><img alt="Logo" src="../img/FH-Logo.jpg"/></a></td></tr>
+	<tr><td><h4>BW4S Portal</h4></td><td><a href="https://www.hwg-lu.de/"><img alt="Logo" src="../img/FH-Logo.jpg"/></a></td></tr>
 </table>
 
 <h2><jsp:getProperty name="msg" property="infoMsg"/></h2>

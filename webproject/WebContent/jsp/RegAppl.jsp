@@ -47,6 +47,10 @@ if(login.equals("Zum Login")){
 	
 }else if(register.equals("Registrieren")){
 	
+	if(userid.equals("") || password.equals("") || email.equals("")){
+		msg.setParamLeer();
+		response.sendRedirect("./Reg.jsp");
+	}else{
 	user.setUserid(userid);
 	user.setPassword(password);
 	user.setUsername(username);
@@ -56,11 +60,16 @@ if(login.equals("Zum Login")){
 	if(user.insertUserIfNotExists()){
 		System.out.println("User successfully inserted...");
 		msg.setRegSuccess(userid);
-	}else msg.setSystemfehler();
+		user.init();
+	}else{
+		msg.setAlreadyExists(userid);
+		user.init();
+	}
 			
 	response.sendRedirect("./Reg.jsp");
+	}
 
-}else response.sendRedirect("./Login.jsp");
+}else response.sendRedirect("./Reg.jsp");
 %>
 
 
